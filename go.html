@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <title>Aguarde...</title>
 
-<!-- REDIRECIONAMENTO AUTOMÁTICO -->
+<!-- REDIRECIONAMENTO AUTOMÁTICO PARA LANDING PAGE -->
 <meta http-equiv="refresh" content="7;url=https://eudanilocesar.github.io/controle-desligamento/">
 
 <style>
@@ -24,19 +24,70 @@ body {
   border-radius: 10px;
   box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
+
+h2 {
+  color: #333;
+}
+
+p {
+  color: #555;
+}
+
+#contador {
+  font-weight: bold;
+  font-size: 18px;
+  color: #0078D7;
+}
+
+button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #0078D7;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #005ea3;
+}
 </style>
+
+<script>
+// Contador regressivo em segundos
+let tempo = 7;
+function contagem() {
+    if (tempo > 0) {
+        document.getElementById('contador').innerText = tempo;
+        tempo--;
+    }
+}
+setInterval(contagem, 1000);
+
+// Função do botão "Ir agora"
+function irAgora() {
+    window.location.href = "https://eudanilocesar.github.io/controle-desligamento/";
+}
+</script>
+
 </head>
 
 <body>
 
 <div class="box">
   <h2>⏳ Aguarde alguns segundos</h2>
-  <p>Você será redirecionado automaticamente para a página de download.</p>
-
+  <p>Você será redirecionado automaticamente para a página de download em <span id="contador">7</span> segundos.</p>
   <p><strong>Não feche esta página.</strong></p>
 
-  <!-- 🔽 AQUI ENTRA O SCRIPT DO ADSTERRA 🔽 -->
-  <!-- https://www.effectivegatecpm.com/t34k1u86x?key=568c7759990f9035fd14002279b7e45d --> 
+  <button onclick="irAgora()">Ir agora</button>
+
+  <!-- 🔽 INSERIR AQUI O SCRIPT OFICIAL DO ADS TERRA 🔽 -->
+  <!-- Exemplo:
+       <script src="https://www.effectivegatecpm.com/t34k1u86x?key=568c7759990f9035fd14002279b7e45d"></script>
+  -->
+
 </div>
 
 </body>
